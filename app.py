@@ -16,7 +16,7 @@ COMPANY_SYMBOLS = {
 
 @app.route('/stock', methods=['POST'])
 def stock_webhook():
-    user_text = request.json.get('input', {}).get('text', '').lower()
+    user_text = request.json.get('text', '').lower()
 
     # Try to match company name in input
     symbol = None
